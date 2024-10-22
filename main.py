@@ -250,3 +250,85 @@ is_sunny = False
 if temp2 > 25 and  is_sunny:
     print("It is HOT outside ")
     print(" It is SUNNY ")
+
+# while loop = execute some code WHILE some condition remains true
+name = input("Enter your name: ")
+if name == " ":
+    print("You did not enter your name!")
+else:
+    print(f"Hello {name}")
+# age
+age = int(input("Enter your age"))
+while age < 0:
+    print("Age can't be negative")
+    age = int(input("Enter your age: "))
+print(f"You are {age} years old")
+
+food = input("Enter your favorite food(q to quit): ")
+while food != "q":
+    print(f"You are like {food}")
+    food = input("Enter another favorite food(q to quit): ")
+print("Thank you!")
+
+#logical operators
+num = int(input("Enter your number between 1 and 100: "))
+while num < 1 or num > 100:
+    print("Number must be between 1 and 100")
+    num = int(input("Enter your number between 1 and 100: "))
+print(f"Your number is {num}")
+
+# python compound interest calculator
+
+principle=0
+rate = 0
+time =0
+
+while True:
+    principle = float(input("Enter your principle amount: "))
+    if principle <= 0:
+        print("principle can't be less than zero")
+    else:
+        break
+while rate <= 0:
+    rate = float(input("Enter the interest rate: "))
+    if rate <= 0:
+        print("rate can't be less than or equal to zero")
+    else:
+        break
+
+while True:
+    time = float(input("Enter time in years: "))
+    if time <= 0:
+        print("rate can't be less than or equal to zero")
+    else:
+        break
+
+total = principle * pow((1+rate/100),time)
+print(f"Your total Balance is ${round(total,2)}")
+
+# for loops = execute a block of code a fixed number of times
+#      You can iterate over a range , string, sequence, etc.
+for x in reversed(range(1,11)):
+    print(x)
+print("HAPPY WEEKEND")
+
+for x in range(1,21):
+    if x ==13:
+        continue
+    else:print(x)
+# count down timer
+
+import time
+
+
+time.sleep(2)
+
+print("HAPPY WEEKEND")
+
+# nested loop = A loop within another loop (outer, inner)
+# outer loop:
+# inner loop
+for x in range(3):
+    for y in range(1, 21):
+        print(y, end="")
+    print()
